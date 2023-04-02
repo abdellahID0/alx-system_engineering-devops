@@ -1,0 +1,6 @@
+#!/bin/bash
+find . -maxdepth 1 -name '*.html' -type f -exec sh -c '
+    for file do
+        cp --update --no-clobber "$file" "../$(basename "$file")"
+    done
+' sh {} +
