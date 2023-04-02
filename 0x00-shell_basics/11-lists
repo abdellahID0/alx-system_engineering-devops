@@ -1,2 +1,11 @@
 #!/bin/bash
-ls -al ; cd .. ; ls -al ; cd /boot ; ls -al
+# List all files in the current directory in long format on 2 lines
+ls -l | paste - - 
+
+# Change to the parent directory and list all files there in long format on 2 lines
+cd ..
+ls -l | paste - -
+
+# Change to the /boot directory and list all files there in long format on 2 lines
+cd /boot
+ls -l | paste - -
